@@ -12,8 +12,9 @@ public class OpenBrowser {
 
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.google.com/");
-
         driver.close();
+
+        WebDriverManager.firefoxdriver().setup();
         driver=new FirefoxDriver();
         driver.get("https://www.google.com/");
     }
