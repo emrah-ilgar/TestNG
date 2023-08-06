@@ -20,7 +20,6 @@ public class Homework {
         driver.manage().window().maximize();
         Thread.sleep(1000);
 
-        //WebElement searchInput = driver.findElement(By.name("_nkw"));
         WebElement searchInput = driver.findElement(By.id("gh-ac"));
         searchInput.sendKeys("selenium");
         Thread.sleep(1000);
