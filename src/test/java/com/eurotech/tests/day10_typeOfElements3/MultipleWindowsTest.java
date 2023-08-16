@@ -60,6 +60,7 @@ public class MultipleWindowsTest {
         WebElement clickHere = driver.findElement(By.linkText("Click Here"));
         clickHere.click();
         clickHere.click();
+        clickHere.click();
 
         Set<String> windowHandles = driver.getWindowHandles();
         for(String handle : windowHandles){
@@ -72,7 +73,7 @@ public class MultipleWindowsTest {
 
         // go back to initial window.
         driver.switchTo().window(parentWindowId);
-        System.out.println("title: " + driver.getTitle());
+        System.out.println("title2: " + driver.getTitle());
 
 
     }

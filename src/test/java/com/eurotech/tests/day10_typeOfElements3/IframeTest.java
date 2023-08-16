@@ -67,8 +67,8 @@ public class IframeTest {
         System.out.println("middleText = " + middleText.getText());
 
 
-//        driver.switchTo().parentFrame();
-//        driver.switchTo().frame("frame-top");
+//      driver.switchTo().parentFrame();
+//      driver.switchTo().frame("frame-top");
         driver.switchTo().defaultContent();
 
         driver.switchTo().frame("frame-top");
@@ -76,6 +76,12 @@ public class IframeTest {
         WebElement leftText = driver.findElement(By.xpath("//body[contains(text(), 'LEFT')]"));
         System.out.println("leftText.getText() = " + leftText.getText());
 
+        driver.switchTo().defaultContent();
+
+        //driver.switchTo().frame("frame-top");
+        driver.switchTo().frame("frame-bottom");
+        WebElement bottomText = driver.findElement(By.xpath("//body[contains(text(),'BOTTOM')]"));
+        System.out.println("bottomText.getText() = " + bottomText.getText());
 
         // task:
         // print out "BOTTOM" text
