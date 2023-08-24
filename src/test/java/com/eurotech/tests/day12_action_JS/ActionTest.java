@@ -16,6 +16,7 @@ public class ActionTest {
 
     WebDriver driver;
 
+
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");

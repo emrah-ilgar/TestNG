@@ -17,8 +17,8 @@ public class FileUpload {
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
