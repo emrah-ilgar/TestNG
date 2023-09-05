@@ -27,6 +27,14 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//span[text()='My Account']")
     public WebElement myAccount;
 
+    @FindBy(xpath = "//a[@class='btn btn-light']")
+    public List<WebElement> dashboardList;
+
+
+    ////tbody/tr[2]/td[2]
+    @FindBy(xpath = "//*[text()='Apple']/../td[2]")
+    public WebElement jobTitle;
+
 
     public void navigateMenu(String menuName){
 
@@ -37,6 +45,12 @@ public class DashboardPage extends BasePage {
 
         BrowserUtils.hover(myAccount);
         Driver.get().findElement(By.xpath("//span[text()='"+subMenuName+"']")).click();
+    }
+    public String getTitle(){
+        return Driver.get().findElement(By.xpath("//td[@class='hide-sm']")).getText();
+    }
+    public String getCompany(String companyName){
+        return Driver.get().findElement(By.xpath("//td[text()='"+companyName+"']")).getText();
     }
 
 

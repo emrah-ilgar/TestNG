@@ -1,6 +1,6 @@
 package com.eurotech.tests.day2_webdriver_basic;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -21,7 +21,7 @@ public class NavigationDemo {
         close the driver
          */
 
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.get("http://www.google.com");
 
